@@ -33,6 +33,14 @@ body {
     padding-top: 10px;
 }
 
+#page-footer {
+	margin-top: 50px;
+	background: #333333;
+  color: #f4f4f4;
+  text-align: center;
+  padding-top: 10px;
+}
+
 .carousel {
 	min-height: 500px;
 	margin-bottom: 60px;
