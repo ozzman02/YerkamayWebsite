@@ -27,30 +27,30 @@
 					</div>
 					<div id="navbar" class="navbar-collapse collapse">
 						<ul class="nav navbar-nav">
-							<li class="active"><a href="index.html">Ministerio</a></li>
+							<li class="active"><a href="index.html" th:href="@{/}">Ministerio</a></li>
 							<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Terapias</a>
 								<ul class="dropdown-menu">
-									<li><a href="tpsicologicas.html">Psicológicas</a></li>
-									<li><a href="tinfantil.html">Niños y Niñas</a></li>
-									<li><a href="tadolescentes.html">Adolescentes</a></li>
-									<li><a href="tespiritual.html">Espiritual / Consejería</a></li>
-									<li><a href="tgapoyo.html">Grupos de Apoyo</a></li>
-									<li><a href="taromaterapia.html">Aromaterapia y Relajación</a></li>
-									<li><a href="tpsicosomaticas.html">Enfermedades Psicosomáticas</a></li>
+									<li><a href="tpsicologicas.html" th:href="@{/tpsicologicas}">Psicológicas</a></li>
+									<li><a href="tinfantil.html" th:href="@{/tinfantil}">Niños y Niñas</a></li>
+									<li><a href="tadolescentes.html" th:href="@{/adolescentes}">Adolescentes</a></li>
+									<li><a href="tespiritual.html" th:href="@{/tespiritual}">Espiritual / Consejería</a></li>
+									<li><a href="tgapoyo.html" th:href="@{/tgapoyo}">Grupos de Apoyo</a></li>
+									<li><a href="taromaterapia.html" th:href="@{/taromaterapia}">Aromaterapia y Relajación</a></li>
+									<li><a href="tpsicosomaticas.html" th:href="@{/tpsicosomaticas}">Enfermedades Psicosomáticas</a></li>
 								</ul>
 							</li>
 							<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Conferencias</a>
 								<ul class="dropdown-menu">
-									<li><a href="talleres.html">Talleres</a></li>
-									<li><a href="capacitaciones.html">Capacitaciones</a></li>
-									<li><a href="coaching.html">Coaching</a></li>
+									<li><a href="talleres.html" th:href="@{/talleres}">Talleres</a></li>
+									<li><a href="capacitaciones.html" th:href="@{/capacitaciones}">Capacitaciones</a></li>
+									<li><a href="coaching.html" th:href="@{/coaching}">Coaching</a></li>
 								</ul>
 							</li>
-							<li><a href="csocial.html">Compromiso Social</a></li>
-							<li><a href="saludintegral.html">Salud Integral</a></li>
-							<li><a href="donaciones.html">Donaciones y Ofrendas</a></li>
-							<li><a href="testimonios.html">Testimonios</a></li>
-							<li><a href="contacto.html">Contacto</a></li>
+							<li><a href="csocial.html" th:href="@{/csocial}">Compromiso Social</a></li>
+							<li><a href="saludintegral.html" th:href="@{/saludintegral}">Salud Integral</a></li>
+							<li><a href="donaciones.html" th:href="@{/donaciones}">Donaciones y Ofrendas</a></li>
+							<li><a href="testimonios.html" th:href="@{/testimonios}">Testimonios</a></li>
+							<li><a href="contacto.html" th:href="@{/contacto}">Contacto</a></li>
 						</ul>
 					</div> <!--/.navbar-collapse -->
 				</div>
@@ -193,18 +193,24 @@
 
 		<div id="page-footer" th:replace="fragments/footer :: footer">
 			<div class="container">
-			<p>Yer Kamay Copyright &copy; 2016, All Rights Reserved</p>
-			<ul class="list-inline banner-social-buttons">
-				<li>
-					<a href="#" class="btn btn-default btn-sm"><i class="fa fa-facebook fa-fw"></i><span class="network-name">Facebook</span></a>
-				</li>
-				<li>
-					<a href="#" class="btn btn-default btn-sm"><i class="fa fa-twitter fa-fw"></i><span class="network-name">Twitter</span></a>
-				</li>
-				<li>
-					<a href="#" class="btn btn-default btn-sm"><i class="fa fa-google-plus fa-fw"></i><span class="network-name">Google</span></a>
-				</li>
-			</ul>
+				<p>Yer Kamay Copyright &copy; 2016, All Rights Reserved</p>
+				<ul class="list-inline banner-social-buttons">
+					<li>
+						<a href="#" class="btn btn-default btn-sm">
+							<i class="fa fa-facebook fa-fw"></i><span class="network-name">Facebook</span>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="btn btn-default btn-sm">
+							<i class="fa fa-twitter fa-fw"></i><span class="network-name">Twitter</span>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="btn btn-default btn-sm">
+							<i class="fa fa-google-plus fa-fw"></i><span class="network-name">Google</span>
+						</a>
+					</li>
+				</ul>
 			</div>
 		</div>
 
