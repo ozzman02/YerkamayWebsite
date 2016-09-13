@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
-  
+<html xmlns:th="http://www.thymeleaf.org">  
   <head>
     <meta charset="utf-8"/>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -13,7 +12,6 @@
 		<link href="../static/css/font-awesome.css" rel="stylesheet" th:href="@{/css/font-awesome.css}"/>
     <title>Yer Kamay - Directora</title>
    </head>
-
   <body>
     <div id="wrap">
       <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -26,45 +24,42 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <!-- <a class="navbar-brand" href="#">Project name</a> -->
           </div>
           <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-              <li class="active"><a href="index.html">Ministerio</a></li>
+              <li class="active"><a href="index.html" th:href="@{/}">Ministerio</a></li>
               <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Terapias</a>
                 <ul class="dropdown-menu">
-                  <li><a href="tpsicologicas.html">Psicológicas</a></li>
-                  <li><a href="tinfantil.html">Niños y Niñas</a></li>
-                  <li><a href="tadolescentes.html">Adolescentes</a></li>
-                  <li><a href="tespiritual.html">Espiritual / Consejería</a></li>
-                  <li><a href="tgapoyo.html">Grupos de Apoyo</a></li>
-                  <li><a href="taromaterapia.html">Aromaterapia y Relajación</a></li>
-                  <li><a href="tpsicosomaticas.html">Tratamiento de Enfermedades Psicosomáticas</a></li>
+                  <li><a href="tpsicologicas.html" th:href="@{/tpsicologicas}">Psicológicas</a></li>
+									<li><a href="tinfantil.html" th:href="@{/tinfantil}">Niños y Niñas</a></li>
+									<li><a href="tadolescentes.html" th:href="@{/adolescentes}">Adolescentes</a></li>
+									<li><a href="tespiritual.html" th:href="@{/tespiritual}">Espiritual / Consejería</a></li>
+									<li><a href="tgapoyo.html" th:href="@{/tgapoyo}">Grupos de Apoyo</a></li>
+									<li><a href="taromaterapia.html" th:href="@{/taromaterapia}">Aromaterapia y Relajación</a></li>
+									<li><a href="tpsicosomaticas.html" th:href="@{/tpsicosomaticas}">Enfermedades Psicosomáticas</a></li>
                 </ul>
               </li>
               <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Conferencias</a>
                 <ul class="dropdown-menu">
-                  <li><a href="talleres.html">Talleres</a></li>
-                  <li><a href="capacitaciones.html">Capacitaciones</a></li>
-                  <li><a href="coaching.html">Coaching</a></li>
+                  <li><a href="talleres.html" th:href="@{/talleres}">Talleres</a></li>
+									<li><a href="capacitaciones.html" th:href="@{/capacitaciones}">Capacitaciones</a></li>
+									<li><a href="coaching.html" th:href="@{/coaching}">Coaching</a></li>
                 </ul>
               </li>
-              <li><a href="csocial.html">Compromiso Social</a></li>
-              <li><a href="saludintegral.html">Salud Integral</a></li>
-              <li><a href="donaciones.html">Donaciones y Ofrendas</a></li>
-              <li><a href="testimonios.html">Testimonios</a></li>
-              <li><a href="contacto.html">Contacto</a></li>
+              <li><a href="csocial.html" th:href="@{/csocial}">Compromiso Social</a></li>
+							<li><a href="saludintegral.html" th:href="@{/saludintegral}">Salud Integral</a></li>
+							<li><a href="donaciones.html" th:href="@{/donaciones}">Donaciones y Ofrendas</a></li>
+							<li><a href="testimonios.html" th:href="@{/testimonios}">Testimonios</a></li>
+							<li><a href="contacto.html" th:href="@{/contacto}">Contacto</a></li>
             </ul>
           </div><!--/.navbar-collapse -->
         </div>
       </nav>
-      
       <div id="title-bar">
         <div class="container">
           <h1>Nuestra Directora</h1>
         </div>
       </div>
-
       <div id="terapeuta">
         <div class="container">
           <div class="row">
@@ -166,9 +161,7 @@
           </div>
         </div>
       </div>
-
       <hr class="featurette-divider"/>
-
       <div class="row featurette">
         <div class="container">
           <div class="col-md-7 col-md-push-5">
@@ -184,7 +177,6 @@
                 	<span class="network-name">Facebook</span>
                 </a>
               </li>
-              
               <li>
               	<a href="https://www.instagram.com/dra.nathaly.dutan/" class="btn btn-default btn-lg"
               		th:href="@{https://www.instagram.com/dra.nathaly.dutan/}">
@@ -207,38 +199,21 @@
           </div>
         </div>
       </div>  
-
       <div id="push"></div>
-
     </div> <!-- end wrap -->
-
     <div id="page-footer" th:replace="fragments/footer :: footer">
 			<div class="container">
 				<p>Yer Kamay Copyright &copy; 2016, All Rights Reserved</p>
 				<ul class="list-inline banner-social-buttons">
-					<li>
-						<a href="#" class="btn btn-default btn-sm">
-							<i class="fa fa-facebook fa-fw"></i><span class="network-name">Facebook</span>
-						</a>
-					</li>
-					<li>
-						<a href="#" class="btn btn-default btn-sm">
-							<i class="fa fa-twitter fa-fw"></i><span class="network-name">Twitter</span>
-						</a>
-					</li>
-					<li>
-						<a href="#" class="btn btn-default btn-sm">
-							<i class="fa fa-google-plus fa-fw"></i><span class="network-name">Google</span>
-						</a>
-					</li>
+					<li><a href="#" class="btn btn-default btn-sm"><i class="fa fa-facebook fa-fw"></i><span class="network-name">Facebook</span></a></li>
+					<li><a href="#" class="btn btn-default btn-sm"><i class="fa fa-twitter fa-fw"></i><span class="network-name">Twitter</span></a></li>
+					<li><a href="#" class="btn btn-default btn-sm"><i class="fa fa-google-plus fa-fw"></i><span class="network-name">Google</span></a></li>
 				</ul>
 			</div>
 		</div>
-		
     <script src="../static/js/ie10-viewport-bug-workaround.js" th:src="@{/js/ie10-viewport-bug-workaround.js}"></script>
 		<script src="../static/js/ie-emulation-modes-warning.js" th:src="@{/js/ie-emulation-modes-warning.js}"></script>
 		<script src="../static/js/jquery-2.1.4.min.js" th:src="@{/js/jquery-2.1.4.min.js}"></script>
 		<script src="../static/js/bootstrap.min.js" th:src="@{/js/bootstrap.min.js}"></script>
-  
   </body>
 </html>
