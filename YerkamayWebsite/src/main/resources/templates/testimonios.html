@@ -1,238 +1,260 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <title>Ministerio Internacional Yer Kamay</title>
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <link href="css/style.css" rel="stylesheet">
-    <link href="css/font-awesome.css" rel="stylesheet">
-
-    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
-    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <script src="js/ie-emulation-modes-warning.js"></script>
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
+    <meta charset="utf-8"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<link rel="icon" href="../static/myfavicon.ico" type="image/x-icon" th:href="@{/myfavicon.ico}"/>
+		<link rel="shortcut icon" href="../static/myfavicon.ico" type="image/x-icon" th:href="@{/myfavicon.ico}"/>
+		<link href="../static/css/bootstrap.min.css" rel="stylesheet" th:href="@{/css/bootstrap.min.css}"/>
+		<link href="../static/css/ie10-viewport-bug-workaround.css" rel="stylesheet" th:href="@{/css/ie10-viewport-bug-workaround.css}"/>
+		<link href="../static/css/style.css" rel="stylesheet" th:href="@{/css/style.css}"/>
+		<link href="../static/css/font-awesome.css" rel="stylesheet" th:href="@{/css/font-awesome.css}"/>
+    <title>Yer Kamay - Testimonios</title>
   </head>
-
   <body>
     <div id="wrap">
       <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
           <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" 
+            	aria-expanded="false" aria-controls="navbar">
               <span class="sr-only">Toggle navigation</span>
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <!-- <a class="navbar-brand" href="#">Project name</a> -->
           </div>
           <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-              <li><a href="index.html">Ministerio</a></li>
+              <li><a href="index.html" th:href="@{/}">Ministerio</a></li>
               <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Terapias</a>
                 <ul class="dropdown-menu">
-                  <li><a href="tpsicologicas.html">Psicológicas</a></li>
-                  <li><a href="tinfantil.html">Niños y Niñas</a></li>
-                  <li><a href="tadolescentes.html">Adolescentes</a></li>
-                  <li><a href="tespiritual.html">Espiritual / Consejería</a></li>
-                  <li><a href="tgapoyo.html">Grupos de Apoyo</a></li>
-                  <li><a href="taromaterapia.html">Aromaterapia y Relajación</a></li>
-                  <li><a href="tpsicosomaticas.html">Enfermedades Psicosomáticas</a></li>
+                  <li><a href="tpsicologicas.html" th:href="@{/tpsicologicas}">Psicológicas</a></li>
+									<li><a href="tinfantil.html" th:href="@{/tinfantil}">Niños y Niñas</a></li>
+									<li><a href="tadolescentes.html" th:href="@{/adolescentes}">Adolescentes</a></li>
+									<li><a href="tespiritual.html" th:href="@{/tespiritual}">Espiritual / Consejería</a></li>
+									<li><a href="tgapoyo.html" th:href="@{/tgapoyo}">Grupos de Apoyo</a></li>
+									<li><a href="taromaterapia.html" th:href="@{/taromaterapia}">Aromaterapia y Relajación</a></li>
+									<li><a href="tpsicosomaticas.html" th:href="@{/tpsicosomaticas}">Enfermedades Psicosomáticas</a></li>
                 </ul>
               </li>
               <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Conferencias</a>
                 <ul class="dropdown-menu">
-                  <li><a href="talleres.html">Talleres</a></li>
-                  <li><a href="capacitaciones.html">Capacitaciones</a></li>
-                  <li><a href="coaching.html">Coaching</a></li>
+                  <li><a href="talleres.html" th:href="@{/talleres}">Talleres</a></li>
+									<li><a href="capacitaciones.html" th:href="@{/capacitaciones}">Capacitaciones</a></li>
+									<li><a href="coaching.html" th:href="@{/coaching}">Coaching</a></li>
                 </ul>
               </li>
-              <li><a href="csocial.html">Compromiso Social</a></li>
-              <li><a href="saludintegral.html">Salud Integral</a></li>
-              <li><a href="donaciones.html">Donaciones y Ofrendas</a></li>
-              <li class="active"><a href="testimonios.html">Testimonios</a></li>
-              <li><a href="contacto.html">Contacto</a></li>
+              <li><a href="csocial.html" th:href="@{/csocial}">Compromiso Social</a></li>
+							<li><a href="saludintegral.html" th:href="@{/saludintegral}">Salud Integral</a></li>
+							<li><a href="donaciones.html" th:href="@{/donaciones}">Donaciones y Ofrendas</a></li>
+							<li><a href="testimonios.html" th:href="@{/testimonios}">Testimonios</a></li>
+							<li><a href="contacto.html" th:href="@{/contacto}">Contacto</a></li>
             </ul>
           </div><!--/.navbar-collapse -->
         </div>
       </nav>
-
       <div class="container">
         <div class="row">
-          <img class="featurette-image img-responsive center-block" src="img/arboles/tree4.jpg" alt="Generic placeholder image" width="340" height="340">
+          <img class="featurette-image img-responsive center-block" src="../static/img/arboles/tree4.jpg" 
+          	alt="Generic placeholder image" width="340" height="340" th:src="@{img/arboles/tree4.jpg}"/>
         </div>
       </div>
-      
       <div class="row featurette testimonios">
         <div class="container">
           <div class="col-md-7 col-md-push-5">
             <h2 class="featurette-heading">Angelica Arce <span class="text-muted">Jefa de Hogar </span></h2>
-            <p class="lead text-justify">“Ir a las charlas de la Dra. Nathaly fue como quitarme una venda de mis ojos, ver una realidad que aunque estaba frente a mis ojos no podía ver, aprendí a que soy valiosa como mujer y que puedo realizar todo lo que me proponga, ya que soy un ser inteligente y con muchas capacidades. Además a ser sororaria algo en lo cual estaba totalmente desubicada, y ni siquiera estaba consciente de lo mal que había sido formada en esa área en especial desde mi niñez. Gracias Nathaly, por toda su ayuda y apoyo.”</p>
+            <p class="lead text-justify">
+            	“Ir a las charlas de la Dra. Nathaly fue como quitarme una venda de mis ojos, ver una realidad que aunque estaba 
+            	frente a mis ojos no podía ver, aprendí a que soy valiosa como mujer y que puedo realizar todo lo que me proponga, 
+            	ya que soy un ser inteligente y con muchas capacidades. Además a ser sororaria algo en lo cual estaba totalmente 
+            	desubicada, y ni siquiera estaba consciente de lo mal que había sido formada en esa área en especial desde mi niñez. 
+            	Gracias Nathaly, por toda su ayuda y apoyo.”
+            </p>
           </div>
           <div class="col-md-5 col-md-pull-7">
-            <img class="img-circle featurette-image img-responsive center-block" src="img/testimonios/testimonio1.jpg" alt="Generic placeholder image">
+            <img class="img-circle featurette-image img-responsive center-block" src="../static/img/testimonios/testimonio1.jpg" 
+            	alt="Generic placeholder image" th:src="@{img/testimonios/testimonio1.jpg}"/>
           </div>
         </div>
       </div>  
-
-      <hr class="featurette-divider">
-
+      <hr class="featurette-divider"/>
       <div class="row featurette">
         <div class="container">
           <div class="col-md-7">
             <h2 class="featurette-heading">Teresita Segura Vargas <span class="text-muted">Líder y Dirigente Comunal</span></h2>
-            <p class="lead text-justify">“El 26 de noviembre celebramos el día de no a la violencia a la mujer,contamos con personas extraordinarias en ellas la psicóloga Nathaly Dután, ella nos motivó con una charla sobre los derechos de la mujer,  fue excelente y caló demasiado en mi persona y con lo que aprendí espero poder ayudar a más  mujeres en mi comunidad.”</p>
+            <p class="lead text-justify">
+            	“El 26 de noviembre celebramos el día de no a la violencia a la mujer, contamos con personas extraordinarias en ellas la 
+            	psicóloga Nathaly Dután, ella nos motivó con una charla sobre los derechos de la mujer, fue excelente y caló demasiado en 
+            	mi persona y con lo que aprendí espero poder ayudar a más  mujeres en mi comunidad.”
+            </p>
           </div>
           <div class="col-md-5">
-            <img class="img-circle featurette-image img-responsive center-block" src="img/testimonios/testimonio2.jpg" alt="Generic placeholder image">
+            <img class="img-circle featurette-image img-responsive center-block" src="../static/img/testimonios/testimonio2.jpg" 
+            	alt="Generic placeholder image" th:src="@{img/testimonios/testimonio2.jpg}"/>
           </div>
         </div>
       </div>
-
-      <hr class="featurette-divider">
-
+      <hr class="featurette-divider"/>
       <div class="row featurette testimonios">
         <div class="container">
           <div class="col-md-7 col-md-push-5">
             <h2 class="featurette-heading">Andres Zarate <span class="text-muted">Estudiante de Contabilidad</span></h2>
-            <p class="lead text-justify">“Comencé a ir a las reuniones por medio de una invitación de un amigo no sabía muy bien de qué se trataba pero por curiosidad decidí ir. Fue una de las mejores decisiones ya q ahí aprendí muchas cosas nuevas q me sorprendieron como aprender a buscar la raíz de algunas cosas que afectaba en mi vida y a sanarlas desde ahí,también a ver las cosas con una mirada más positiva ya q ahí encontré amigos de verdad con los cuales viví experiencias inolvidables.”</p>
+            <p class="lead text-justify">
+            	“Comencé a ir a las reuniones por medio de una invitación de un amigo no sabía muy bien de qué se trataba pero por 
+            	curiosidad decidí ir. Fue una de las mejores decisiones ya q ahí aprendí muchas cosas nuevas q me sorprendieron como 
+            	aprender a buscar la raíz de algunas cosas que afectaba en mi vida y a sanarlas desde ahí,también a ver las cosas con 
+            	una mirada más positiva ya q ahí encontré amigos de verdad con los cuales viví experiencias inolvidables.”
+            </p>
           </div>
           <div class="col-md-5 col-md-pull-7">
-            <img class="img-circle featurette-image img-responsive center-block" src="img/testimonios/testimonio3.jpg" alt="Generic placeholder image">
+            <img class="img-circle featurette-image img-responsive center-block" src="../static/img/testimonios/testimonio3.jpg" 
+            	alt="Generic placeholder image" th:src="@{img/testimonios/testimonio3.jpg}"/>
           </div>
         </div>
       </div> 
-
-      <hr class="featurette-divider">
-
+      <hr class="featurette-divider"/>
       <div class="row featurette">
         <div class="container">
           <div class="col-md-7">
             <h2 class="featurette-heading">Vanessa S. A. <span class="text-muted">Educadora Física</span></h2>
-            <p class="lead text-justify">“SOY UN FRUTO DE LA VISIÓN YER KAMAY. Nací en un hogar religioso, mi Padre era Pastor y lo describo como “Papá ausente y agresor”, creía que conocía a Dios, pero era un dios lejano y castigador. Tenía una necesidad de sentirme vista, amada y cuidada por un hombre, me sentía vacía, sola e insegura. Por mucho tiempo busqué parejas que suplieran esa ausencia, después de muchos años de pasarla mal, decidí satisfacer solo mi apetito sexual, ya no me importaba nada, herí a muchas personas, nada era suficiente, pero por dentro seguía igual, no lograba llenar ese vacío, soledad e inseguridad.  Cuando llegue a Yer Kamay mi vida dio un giro inesperado, conocí al Espíritu Santo y por medio de Él a Jesús, el verdadero, no era el mismo de los cuentos de niña, éste Jesús si me ama y tiene poder sobrenatural para cambiar vidas; fui liberada del espíritu sexual que me atormentaba, no he vuelto a sentir ese deseo incontrolable, ni esa necesidad de llenarlo con cualquier hombre a la par; no más vacío, soledad e inseguridad, ahora puedo verme al espejo y aceptarme como soy, Él me liberó. Soy un ejemplo vivo del poder sobrenatural de Jesús para liberar y cambiar vidas; ahora poco a poco estoy conociendo el amor de Dios como Padre, sólo su amor puede hacer que una mujer como yo se sienta amada, su paternidad es real, Él es bueno y tiene un propósito para cada persona en éste mundo, sólo hay que buscarlo en el lugar correcto. Él me cuida, me chinea, sana mis heridas y está conmigo en todo momento.”</p>
+            <p class="lead text-justify">
+            	“SOY UN FRUTO DE LA VISIÓN YER KAMAY. Nací en un hogar religioso, mi Padre era Pastor y lo describo como “Papá ausente y agresor”, 
+            	creía que conocía a Dios, pero era un dios lejano y castigador. Tenía una necesidad de sentirme vista, amada y cuidada por un hombre, 
+            	me sentía vacía, sola e insegura. Por mucho tiempo busqué parejas que suplieran esa ausencia, después de muchos años de pasarla mal, 
+            	decidí satisfacer solo mi apetito sexual, ya no me importaba nada, herí a muchas personas, nada era suficiente, pero por dentro seguía
+             	igual, no lograba llenar ese vacío, soledad e inseguridad.  Cuando llegue a Yer Kamay mi vida dio un giro inesperado, conocí al 
+             	Espíritu Santo y por medio de Él a Jesús, el verdadero, no era el mismo de los cuentos de niña, éste Jesús si me ama y tiene poder 
+             	sobrenatural para cambiar vidas; fui liberada del espíritu sexual que me atormentaba, no he vuelto a sentir ese deseo incontrolable, 
+             	ni esa necesidad de llenarlo con cualquier hombre a la par; no más vacío, soledad e inseguridad, ahora puedo verme al espejo y 
+             	aceptarme como soy, Él me liberó. Soy un ejemplo vivo del poder sobrenatural de Jesús para liberar y cambiar vidas; ahora poco a poco
+             	estoy conociendo el amor de Dios como Padre, sólo su amor puede hacer que una mujer como yo se sienta amada, su paternidad es real, 
+             	Él es bueno y tiene un propósito para cada persona en éste mundo, sólo hay que buscarlo en el lugar correcto. Él me cuida, me chinea, 
+             	sana mis heridas y está conmigo en todo momento.”
+            </p>
           </div>
           <div class="col-md-5">
-            <img class="img-circle featurette-image img-responsive center-block" src="img/testimonios/testimonio4.jpg" alt="Generic placeholder image">
+            <img class="img-circle featurette-image img-responsive center-block" src="../static/img/testimonios/testimonio4.jpg" 
+            	alt="Generic placeholder image" th:src="@{img/testimonios/testimonio4.jpg}"/>
           </div>
         </div>
       </div>
-
-      <hr class="featurette-divider">
-
+      <hr class="featurette-divider"/>
       <div class="row featurette testimonios">
         <div class="container">
           <div class="col-md-7 col-md-push-5">
             <h2 class="featurette-heading">Andrés Ausokoa <span class="text-muted">Bilbao – España</span></h2>
-            <p class="lead text-justify">“Viniendo yo de un lugar donde impera la doctrina muerta, Yer Kamay es como un oasis en medio de un desierto espiritual. En esta congregación la presencia del Espíritu Santo es patente y fuerte. Uno se siente como en casa entre sus hermanos, y en la presencia del Padre.”</p>
+            <p class="lead text-justify">
+            	“Viniendo yo de un lugar donde impera la doctrina muerta, Yer Kamay es como un oasis en medio de un desierto espiritual. 
+            	En esta congregación la presencia del Espíritu Santo es patente y fuerte. Uno se siente como en casa entre sus hermanos, 
+            	y en la presencia del Padre.”
+            </p>
           </div>
           <div class="col-md-5 col-md-pull-7">
-            <img class="img-circle featurette-image img-responsive center-block" src="img/testimonios/testimonio5.jpg" alt="Generic placeholder image">
+            <img class="img-circle featurette-image img-responsive center-block" src="../static/img/testimonios/testimonio5.jpg" 
+            	alt="Generic placeholder image" th:src="@{img/testimonios/testimonio5.jpg}"/>
           </div>
         </div>
       </div>
-
-      <hr class="featurette-divider">
-
+      <hr class="featurette-divider"/>
       <div class="row featurette">
         <div class="container">
           <div class="col-md-7">
             <h2 class="featurette-heading">Eillyn D.J. <span class="text-muted">Estudiante de Arquitectura</span></h2>
-            <p class="lead text-justify">“Hola! Participe en un taller de mujeres y la verdad me pareció una experiencia increíble, escuchar experiencias de otras mujeres y sus testimonios fue bastante inspirador. La verdad tomar la decisión de asistir a una charla es dar un paso a un cambio en nuestras vidas, es recibir algo diferente que nos ayude a darnos cuenta lo importante que es valorarnos a nosotras mismas y saber que tenemos la capacidad de   hacer muchas cosas. Me gusto mucho el taller, lo recomiendo.”</p>
+            <p class="lead text-justify">
+            	“Hola! Participe en un taller de mujeres y la verdad me pareció una experiencia increíble, escuchar experiencias de otras 
+            	mujeres y sus testimonios fue bastante inspirador. La verdad tomar la decisión de asistir a una charla es dar un paso a un 
+            	cambio en nuestras vidas, es recibir algo diferente que nos ayude a darnos cuenta lo importante que es valorarnos a nosotras 
+            	mismas y saber que tenemos la capacidad de hacer muchas cosas. Me gusto mucho el taller, lo recomiendo.”
+            </p>
           </div>
           <div class="col-md-5">
-            <img class="img-circle featurette-image img-responsive center-block" src="img/testimonios/testimonio6.jpg" alt="Generic placeholder image">
+            <img class="img-circle featurette-image img-responsive center-block" src="../static/img/testimonios/testimonio6.jpg" 
+            	alt="Generic placeholder image" th:src="@{img/testimonios/testimonio6.jpg}"/>
           </div>
         </div>
       </div>
-
-      <hr class="featurette-divider">
-
+      <hr class="featurette-divider"/>
       <div class="row featurette testimonios">
         <div class="container">
           <div class="col-md-7 col-md-push-5">
-            <h2 class="featurette-heading">Lic. Shirley Marín González <span class="text-muted">Mujer y madre Abogada y Asesora Legislativa</span></h2>
-            <p class="lead text-justify">“He tenido la dicha de estar en conferencias y talleres con la Dra. Nathaly Dután. Una experiencia realmente confortable, en la que me siento desnuda y no siento pena, porque mis virtudes son reforzadas y mis deficiencias salen a la luz, con tal suavidad, que creo que puedo sacarles provecho. Mi autoestima ha sido beneficiada, el amor por lo que hago se ha incrementado, conozco mi valor, mi potencial y su consejo ha hecho que ame más, que dé más, que viva más! No tengo ningún reparo en recomendar sus servicios charlas, conferencias, talleres, porque he sido beneficiada con cada palabra recibida.”</p>
+            <h2 class="featurette-heading">Lic. Shirley Marín González 
+            	<span class="text-muted">Mujer y madre Abogada y Asesora Legislativa</span>
+            </h2>
+            <p class="lead text-justify">
+            	“He tenido la dicha de estar en conferencias y talleres con la Dra. Nathaly Dután. Una experiencia realmente confortable, 
+            	en la que me siento desnuda y no siento pena, porque mis virtudes son reforzadas y mis deficiencias salen a la luz, con tal 
+            	suavidad, que creo que puedo sacarles provecho. Mi autoestima ha sido beneficiada, el amor por lo que hago se ha incrementado, 
+            	conozco mi valor, mi potencial y su consejo ha hecho que ame más, que dé más, que viva más! No tengo ningún reparo en recomendar 
+            	sus servicios charlas, conferencias, talleres, porque he sido beneficiada con cada palabra recibida.”
+            </p>
           </div>
           <div class="col-md-5 col-md-pull-7">
-            <img class="img-circle featurette-image img-responsive center-block" src="img/testimonios/testimonio7.jpg" alt="Generic placeholder image">
+            <img class="img-circle featurette-image img-responsive center-block" src="../static/img/testimonios/testimonio7.jpg" 
+            	alt="Generic placeholder image" th:src="@{img/testimonios/testimonio7.jpg}"/>
           </div>
         </div>
       </div>
-
-      <hr class="featurette-divider">
-
+      <hr class="featurette-divider"/>
       <div class="row featurette">
         <div class="container">
           <div class="col-md-7">
             <h2 class="featurette-heading">Jefry Solís <span class="text-muted">Maestro de Obras</span></h2>
-            <p class="lead text-justify">“Asistí a un taller que sobre igualdad de género y feminismo, y mi punto de vista cambió bastante y comprendí la necesidad de que se dé un cambio en la sociedad. Es hasta que alguien nos enseña el parámetro de desigualdad y superioridad que tiene el hombre sobre la mujer que entendemos que lo que hoy conocemos como ser hombres es muy erróneo. Entendí que a la mujer le hemos impuesto roles que no le corresponden, además que viven diariamente situaciones que no les toca como, el acoso callejero. Aprendí del primer feminista que permitió la participación de mujeres en su ministerio como lo fue el señor Jesús. Agradecido con la Dra. Nathaly Dután, por su información y formación para mirar desde afuera  la sociedad machista y cambiar de perspectiva.”</p>
+            <p class="lead text-justify">
+            	“Asistí a un taller que sobre igualdad de género y feminismo, y mi punto de vista cambió bastante y comprendí la 
+            	necesidad de que se dé un cambio en la sociedad. Es hasta que alguien nos enseña el parámetro de desigualdad y 
+            	superioridad que tiene el hombre sobre la mujer que entendemos que lo que hoy conocemos como ser hombres es muy erróneo. 
+            	Entendí que a la mujer le hemos impuesto roles que no le corresponden, además que viven diariamente situaciones que no les 
+            	toca como, el acoso callejero. Aprendí del primer feminista que permitió la participación de mujeres en su ministerio como 
+            	lo fue el señor Jesús. Agradecido con la Dra. Nathaly Dután, por su información y formación para mirar desde afuera la sociedad 
+            	machista y cambiar de perspectiva.”
+            </p>
           </div>
           <div class="col-md-5">
-            <img class="img-circle featurette-image img-responsive center-block" src="img/testimonios/testimonio8.jpg" alt="Generic placeholder image">
+            <img class="img-circle featurette-image img-responsive center-block" src="../static/img/testimonios/testimonio8.jpg" 
+            	alt="Generic placeholder image" th:src="@{img/testimonios/testimonio8.jpg}"/>
           </div>
         </div>
       </div>
-
-      <hr class="featurette-divider">
-
+      <hr class="featurette-divider"/>
       <div class="row featurette testimonios">
         <div class="container">
           <div class="col-md-7 col-md-push-5">
             <h2 class="featurette-heading">Ing. Xinia Jiménez <span class="text-muted">Hidrogeóloga</span></h2>
-            <p class="lead text-justify">“He partestimonios participado en los talleres, y me han gustado mucho, se genera un espacio de mucha confianza, lo que me permitió abrirme mucho y aprovechar más el taller.  Aprendí conceptos que me ayudaran para toda la vida. Me gusto mucho que en los talleres se usa aromaterapia y musicoterapia.”</p>
+            <p class="lead text-justify">
+            	“He partestimonios participado en los talleres, y me han gustado mucho, se genera un espacio de mucha confianza, lo que 
+            	me permitió abrirme mucho y aprovechar más el taller. Aprendí conceptos que me ayudaran para toda la vida. Me gusto mucho 
+            	que en los talleres se usa aromaterapia y musicoterapia.”
+            </p>
           </div>
           <div class="col-md-5 col-md-pull-7">
-            <img class="img-circle featurette-image img-responsive center-block" src="img/testimonios/testimonio9.jpg" alt="Generic placeholder image">
+            <img class="img-circle featurette-image img-responsive center-block" src="../static/img/testimonios/testimonio9.jpg" 
+            	alt="Generic placeholder image" th:src="@{img/testimonios/testimonio9.jpg}"/>
           </div>
         </div>
       </div>
-
       <div class="container">
         <div class="row">
-          <img class="featurette-image img-responsive center-block" src="img/arboles/tree4.jpg" alt="Generic placeholder image" width="340" height="340">
+          <img class="featurette-image img-responsive center-block" src="../static/img/arboles/tree4.jpg" 
+          	alt="Generic placeholder image" width="340" height="340" th:src="@{img/arboles/tree4.jpg}"/>
         </div>
       </div>
-          
       <div id="push"></div>
-
     </div> <!-- end wrap -->
-
-    <div id="footer">
-      <div class="container">
-        <p>Yer Kamay Copyright &copy; 2016, All Rights Reserved</p>
-        <ul class="list-inline banner-social-buttons">
-          <li><a href="#" class="btn btn-default btn-sm"><i class="fa fa-facebook fa-fw"></i><span class="network-name">Facebook</span></a></li>
-          <li><a href="#" class="btn btn-default btn-sm"><i class="fa fa-twitter fa-fw"></i><span class="network-name">Twitter</span></a></li>
-          <li><a href="#" class="btn btn-default btn-sm"><i class="fa fa-google-plus fa-fw"></i><span class="network-name">Google</span></a></li>
-        </ul>    
-      </div>
-    </div>
-
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
-    <script src="js/bootstrap.min.js"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="js/ie10-viewport-bug-workaround.js"></script>
+    <div id="page-footer" th:replace="fragments/footer :: footer">
+			<div class="container">
+				<p>Yer Kamay Copyright &copy; 2016, All Rights Reserved</p>
+				<ul class="list-inline banner-social-buttons">
+					<li><a href="#" class="btn btn-default btn-sm"><i class="fa fa-facebook fa-fw"></i><span class="network-name">Facebook</span></a></li>
+					<li><a href="#" class="btn btn-default btn-sm"><i class="fa fa-twitter fa-fw"></i><span class="network-name">Twitter</span></a></li>
+					<li><a href="#" class="btn btn-default btn-sm"><i class="fa fa-google-plus fa-fw"></i><span class="network-name">Google</span></a></li>
+				</ul>
+			</div>
+		</div>
+		<script src="../static/js/ie10-viewport-bug-workaround.js" th:src="@{/js/ie10-viewport-bug-workaround.js}"></script>
+		<script src="../static/js/ie-emulation-modes-warning.js" th:src="@{/js/ie-emulation-modes-warning.js}"></script>
+		<script src="../static/js/jquery-2.1.4.min.js" th:src="@{/js/jquery-2.1.4.min.js}"></script>
+		<script src="../static/js/bootstrap.min.js" th:src="@{/js/bootstrap.min.js}"></script>
   </body>
 </html>
