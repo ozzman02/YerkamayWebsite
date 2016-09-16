@@ -1,12 +1,24 @@
 package com.yerkamay.web.controllers;
 
+import javax.validation.Valid;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
+
+import com.yerkamay.web.commands.ConferenceCommand;
+import com.yerkamay.web.commands.ContactCommand;
 
 @Controller
 public class MainController {
 
+	private Logger logger = LoggerFactory.getLogger(MainController.class);
+	
 	@RequestMapping({"/", "index"})
 	public String getIndex(ModelAndView modelAndView) {
 		return "index";
@@ -92,14 +104,45 @@ public class MainController {
 		return "testimonios";
 	}
 	
-	@RequestMapping("/contacto")
-	public String getContacto(ModelAndView modelAndView) {
-		return "contacto";
-	}
-	
 	@RequestMapping("/becas")
 	public String getBecas(ModelAndView modelAndView) {
 		return "becas";
+	}
+	
+	@RequestMapping("/contacto")
+	public String getContacto(Model model) {
+		model.addAttribute("contactCommand", new ContactCommand());
+		return "contacto";
+	}
+	
+	@RequestMapping(value = "/sendContactEmail", method = RequestMethod.POST)
+	public String sendContactEmail(@Valid ContactCommand contactCommand, BindingResult bindingResult) {
+		
+		if (bindingResult.hasErrors()) {
+			return "contacto";
+		}
+		
+		logger.info("Testing contact form validation");
+		
+		return "redirect:emailSent";
+	}
+	
+	@RequestMapping("/formulario")
+	public String getConferenceForm(Model model) {
+		model.addAttribute("conferenceCommand", new ConferenceCommand());
+		return "formulario";
+	}
+	
+	@RequestMapping(value = "/sendConferenceEmail", method = RequestMethod.POST)
+	public String sendConferenceEmail(@Valid ContactCommand contactCommand, BindingResult bindingResult) {
+		
+		if (bindingResult.hasErrors()) {
+			return "formulario";
+		}
+		
+		logger.info("Testing conference form validation");
+		
+		return "redirect:emailSent";
 	}
 	
 }

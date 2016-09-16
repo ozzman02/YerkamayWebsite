@@ -70,7 +70,9 @@
           </p>
           <p class="lead text-justify">
           	Los temas de las conferencias varían, su principal enfoque y llamado de Dios es a la liberación, sanidad y mover en 
-          	lo sobrenatural del Espíritu Santo.
+          	lo sobrenatural del Espíritu Santo. Los temas varían y se van anunciando conforme se van desarrollando para la 
+          	participación del público. También se pueden formar a corde a sus necesidades por lo cual recomendamos llenar el 
+          	formulario que se muestra en la parte inferior.
           </p> 
         </div>
         <div class="col-md-4">
@@ -99,26 +101,49 @@
       <div class="row featurette">
         <div class="container">
           <div class="col-md-7 col-md-push-5">
-            <form>
-              <div class="form-group">
+            <form th:object="${conferenceCommand}" th:action="@{/sendConferenceEmail}" method="post">
+            	<div th:if="${#fields.hasErrors('*')}" class="alert alert-danger">
+								<p th:text="#{conferenceCommand.hasErrors}">Error Message</p>
+							</div>
+              <div class="form-group" th:class="${#fields.hasErrors('name')} ? 'form-group has-error' : 'form-group'">
                 <label>Nombre</label>
-                <input type="text" class="form-control">
+                <input type="text" class="form-control" th:field="*{name}" th:errorclass="has-error"/>
+              	<span class="help-block" th:if="${#fields.hasErrors('name')}">
+              		<ul>
+										<li th:each="err : ${#fields.errors('name')}" th:text="${err}" />
+									</ul>
+								</span>
               </div>
-              <div class="form-group">
+              <div class="form-group" th:class="${#fields.hasErrors('phone')} ? 'form-group has-error' : 'form-group'">
                 <label>Teléfono</label>
-                <input type="text" class="form-control">
+                <input type="text" class="form-control" th:field="*{phone}" th:errorclass="has-error"/>
+              	<span class="help-block" th:if="${#fields.hasErrors('phone')}">
+              		<ul>
+										<li th:each="err : ${#fields.errors('phone')}" th:text="${err}" />
+									</ul>
+								</span>
               </div>
-              <div class="form-group">
+              <div class="form-group" th:class="${#fields.hasErrors('email')} ? 'form-group has-error' : 'form-group'">
                 <label>Correo electrónico</label>
-                <input type="email" class="form-control">
+                <input type="email" class="form-control" th:field="*{email}" th:errorclass="has-error"/>
+              	<span class="help-block" th:if="${#fields.hasErrors('email')}">
+              		<ul>
+										<li th:each="err : ${#fields.errors('email')}" th:text="${err}" />
+									</ul>
+								</span>
               </div>
-              <div class="form-group">
+              <div class="form-group" th:class="${#fields.hasErrors('organization')} ? 'form-group has-error' : 'form-group'">
                 <label>Organización / Iglesia</label>
-                <input type="text" class="form-control">
+                <input type="text" class="form-control" th:field="*{organization}" th:errorclass="has-error"/>
+              	<span class="help-block" th:if="${#fields.hasErrors('organization')}">
+              		<ul>
+										<li th:each="err : ${#fields.errors('organization')}" th:text="${err}" />
+									</ul>
+								</span>
               </div>
-              <div class="form-group">
+              <div class="form-group" th:class="${#fields.hasErrors('conferenceType')} ? 'form-group has-error' : 'form-group'">
                 <label>Tipo de Conferencia</label>
-                <select class="form-control">
+                <select class="form-control" th:field="*{conferenceType}" th:errorclass="has-error"/>
                   <option>Rompiendo Argumentos</option>
                   <option>Identidad de Hijos e Hijas de Dios</option>
                   <option>Espíritu Santo</option>
@@ -132,14 +157,24 @@
                   <option>Otro</option>
                 </select>
               </div>
-              <div class="form-group">
+              <span class="help-block" th:if="${#fields.hasErrors('conferenceType')}">
+              	<ul>
+									<li th:each="err : ${#fields.errors('conferenceType')}" th:text="${err}" />
+								</ul>
+							</span>
+              <div class="form-group" th:class="${#fields.hasErrors('place')} ? 'form-group has-error' : 'form-group'">
                 <label>Establecimiento</label>
-                <select class="form-control">
+                <select class="form-control" th:field="*{place}" th:errorclass="has-error"/>
                   <option>Cuentan con lugar</option>
                   <option>Incluimos lugar en el presupuesto</option>
                   <option>Otro</option>
                 </select>
               </div>
+              <span class="help-block" th:if="${#fields.hasErrors('place')}">
+              	<ul>
+									<li th:each="err : ${#fields.errors('place')}" th:text="${err}" />
+								</ul>
+							</span>
               <div class="form-group">
                 <label>Equipo (Micrófono, audio, proyector, etc)</label>
                 <select class="form-control">
