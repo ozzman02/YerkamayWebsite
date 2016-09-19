@@ -32,7 +32,7 @@
                 <ul class="dropdown-menu">
                   <li><a href="tpsicologicas.html" th:href="@{/tpsicologicas}">Psicológicas</a></li>
 									<li><a href="tinfantil.html" th:href="@{/tinfantil}">Niños y Niñas</a></li>
-									<li><a href="tadolescentes.html" th:href="@{/adolescentes}">Adolescentes</a></li>
+									<li><a href="tadolescentes.html" th:href="@{/tadolescentes}">Adolescentes</a></li>
 									<li><a href="tespiritual.html" th:href="@{/tespiritual}">Espiritual / Consejería</a></li>
 									<li><a href="tgapoyo.html" th:href="@{/tgapoyo}">Grupos de Apoyo</a></li>
 									<li><a href="taromaterapia.html" th:href="@{/taromaterapia}">Aromaterapia y Relajación</a></li>
@@ -143,51 +143,61 @@
               </div>
               <div class="form-group" th:class="${#fields.hasErrors('conferenceType')} ? 'form-group has-error' : 'form-group'">
                 <label>Tipo de Conferencia</label>
-                <select class="form-control" th:field="*{conferenceType}" th:errorclass="has-error"/>
-                  <option>Rompiendo Argumentos</option>
-                  <option>Identidad de Hijos e Hijas de Dios</option>
-                  <option>Espíritu Santo</option>
-                  <option>Liberación</option>
-                  <option>Reino de Dios</option>
-                  <option>Escuela para Padres</option>
-                  <option>Emprendeurismo</option>
-                  <option>Mujer y la Biblia</option>
-                  <option>Juventud</option>
-                  <option>Liderazgo</option>
-                  <option>Otro</option>
+                <select class="form-control" th:field="*{conferenceType}" th:errorclass="has-error">
+                  <option value="Rompiendo Argumentos">Rompiendo Argumentos</option>
+                  <option value="Identidad de Hijos e Hijas de Dios">Identidad de Hijos e Hijas de Dios</option>
+                  <option value="Espíritu Santo">Espíritu Santo</option>
+                  <option value="Liberación">Liberación</option>
+                  <option value="Reino de Dios">Reino de Dios</option>
+                  <option value="Escuela para Padres">Escuela para Padres</option>
+                  <option value="Emprendeurismo">Emprendeurismo</option>
+                  <option value="Mujer y la Biblia">Mujer y la Biblia</option>
+                  <option value="Juventud">Juventud</option>
+                  <option value="Liderazgo">Liderazgo</option>
+                  <option value="Otro">Otro</option>
                 </select>
+                <span class="help-block" th:if="${#fields.hasErrors('conferenceType')}">
+              		<ul>
+										<li th:each="err : ${#fields.errors('conferenceType')}" th:text="${err}" />
+									</ul>
+								</span>
               </div>
-              <span class="help-block" th:if="${#fields.hasErrors('conferenceType')}">
-              	<ul>
-									<li th:each="err : ${#fields.errors('conferenceType')}" th:text="${err}" />
-								</ul>
-							</span>
               <div class="form-group" th:class="${#fields.hasErrors('place')} ? 'form-group has-error' : 'form-group'">
                 <label>Establecimiento</label>
-                <select class="form-control" th:field="*{place}" th:errorclass="has-error"/>
-                  <option>Cuentan con lugar</option>
-                  <option>Incluimos lugar en el presupuesto</option>
-                  <option>Otro</option>
+                <select class="form-control" th:field="*{place}" th:errorclass="has-error">
+                  <option value="Cuentan con lugar">Cuentan con lugar</option>
+                  <option value="Incluimos lugar en el presupuesto">Incluimos lugar en el presupuesto</option>
+                  <option value="Otro">Otro</option>
                 </select>
+              	<span class="help-block" th:if="${#fields.hasErrors('place')}">
+              		<ul>
+										<li th:each="err : ${#fields.errors('place')}" th:text="${err}" />
+									</ul>
+								</span>
               </div>
-              <span class="help-block" th:if="${#fields.hasErrors('place')}">
-              	<ul>
-									<li th:each="err : ${#fields.errors('place')}" th:text="${err}" />
-								</ul>
-							</span>
-              <div class="form-group">
+              <div class="form-group" th:class="${#fields.hasErrors('equipment')} ? 'form-group has-error' : 'form-group'">
                 <label>Equipo (Micrófono, audio, proyector, etc)</label>
-                <select class="form-control">
-                  <option>Cuentan con el equipo</option>
-                  <option>Incluimos equipo en el presupuesto</option>
-                  <option>Otro</option>
+                <select class="form-control" th:field="*{equipment}" th:errorclass="has-error">
+                  <option value="Cuentan con el equipo">Cuentan con el equipo</option>
+                  <option value="Incluimos equipo en el presupuesto">Incluimos equipo en el presupuesto</option>
+                  <option value="Otro">Otro</option>
                 </select>
+                <span class="help-block" th:if="${#fields.hasErrors('equipment')}">
+              		<ul>
+										<li th:each="err : ${#fields.errors('equipment')}" th:text="${err}" />
+									</ul>
+								</span>
               </div>
-              <div class="form-group">
+              <div class="form-group" th:class="${#fields.hasErrors('message')} ? 'form-group has-error' : 'form-group'">
                 <label>Mensaje</label>
-                <textarea class="form-control"></textarea>
+                <textarea class="form-control" th:field="*{message}" th:errorclass="has-error"></textarea>
+              	<span class="help-block" th:if="${#fields.hasErrors('message')}">
+              		<ul>
+										<li th:each="err : ${#fields.errors('message')}" th:text="${err}" />
+									</ul>
+								</span>
               </div>
-                <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
+              <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
             </form>
           </div>
           <div class="col-md-5 col-md-pull-7">

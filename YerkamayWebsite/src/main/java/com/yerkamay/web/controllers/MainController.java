@@ -4,6 +4,9 @@ import javax.validation.Valid;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.env.Environment;
+import org.springframework.mail.MailException;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -13,11 +16,18 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.yerkamay.web.commands.ConferenceCommand;
 import com.yerkamay.web.commands.ContactCommand;
+import com.yerkamay.web.services.NotificationService;
 
 @Controller
 public class MainController {
 
 	private Logger logger = LoggerFactory.getLogger(MainController.class);
+	
+	@Autowired
+	private NotificationService notificationService;
+	
+	@Autowired
+	Environment environment;
 	
 	@RequestMapping({"/", "index"})
 	public String getIndex(ModelAndView modelAndView) {
@@ -122,9 +132,14 @@ public class MainController {
 			return "contacto";
 		}
 		
-		logger.info("Testing contact form validation");
-		
-		return "redirect:emailSent";
+		try {
+			notificationService.sendContactNotification(contactCommand);
+		} catch (MailException e) {
+			logger.info("Error sending email: " + e.getMessage());
+			return "emailerror";
+		}
+	
+		return "redirect:emailsent";
 	}
 	
 	@RequestMapping("/formulario")
@@ -134,15 +149,35 @@ public class MainController {
 	}
 	
 	@RequestMapping(value = "/sendConferenceEmail", method = RequestMethod.POST)
-	public String sendConferenceEmail(@Valid ContactCommand contactCommand, BindingResult bindingResult) {
+	public String sendConferenceEmail(@Valid ConferenceCommand conferenceCommand, BindingResult bindingResult) {
+		
+		logger.info(environment.getProperty("from"));
+		logger.info(environment.getProperty("to"));
+		logger.info(environment.getProperty("contact.subject"));
+		logger.info(environment.getProperty("conference.subject"));
 		
 		if (bindingResult.hasErrors()) {
 			return "formulario";
 		}
 		
-		logger.info("Testing conference form validation");
+		try {
+			notificationService.sendConferenceNotification(conferenceCommand);
+		} catch (MailException e) {
+			logger.info("Error sending email: " + e.getMessage());
+			return "emailerror";
+		}
 		
-		return "redirect:emailSent";
+		return "redirect:emailsent";
+	}
+	
+	@RequestMapping("/emailsent")
+	public String emailSentConfirmation(ModelAndView modelAndView) {
+		return "emailsent";
+	}
+	
+	@RequestMapping("/emailerror")
+	public String emailError(ModelAndView modelAndView) {
+		return "emailerror";
 	}
 	
 }

@@ -32,7 +32,7 @@
                 <ul class="dropdown-menu">
                   <li><a href="tpsicologicas.html" th:href="@{/tpsicologicas}">Psicológicas</a></li>
 									<li><a href="tinfantil.html" th:href="@{/tinfantil}">Niños y Niñas</a></li>
-									<li><a href="tadolescentes.html" th:href="@{/adolescentes}">Adolescentes</a></li>
+									<li><a href="tadolescentes.html" th:href="@{/tadolescentes}">Adolescentes</a></li>
 									<li><a href="tespiritual.html" th:href="@{/tespiritual}">Espiritual / Consejería</a></li>
 									<li><a href="tgapoyo.html" th:href="@{/tgapoyo}">Grupos de Apoyo</a></li>
 									<li><a href="taromaterapia.html" th:href="@{/taromaterapia}">Aromaterapia y Relajación</a></li>
@@ -139,7 +139,7 @@
       <div class="row">
         <div class="container">
           <iframe class="youtube-player center-block" width="760" height="458" src="https://www.youtube.com/embed/BvBqSNkCe2A" 
-            frameborder="0" allowfullscreen=true>
+            th:src="@{https://www.youtube.com/embed/BvBqSNkCe2A}" frameborder="0" allowfullscreen="true">
           </iframe>
         </div>
       </div>

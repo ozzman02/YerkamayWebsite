@@ -93,5 +93,12 @@ public class ConferenceCommand {
 	public void setMessage(String message) {
 		this.message = message;
 	}
+
+	@Override
+	public String toString() {
+		return "ConferenceCommand [name=" + name + ", phone=" + phone + ", email=" + email + ", organization="
+				+ organization + ", conferenceType=" + conferenceType + ", place=" + place + ", equipment=" + equipment
+				+ ", message=" + message + "]";
+	}
 	
 }
