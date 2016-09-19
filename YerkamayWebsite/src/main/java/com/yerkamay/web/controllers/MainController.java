@@ -5,7 +5,6 @@ import javax.validation.Valid;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.core.env.Environment;
 import org.springframework.mail.MailException;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -25,9 +24,6 @@ public class MainController {
 	
 	@Autowired
 	private NotificationService notificationService;
-	
-	@Autowired
-	Environment environment;
 	
 	@RequestMapping({"/", "index"})
 	public String getIndex(ModelAndView modelAndView) {
@@ -99,7 +95,7 @@ public class MainController {
 		return "csocial";
 	}
 	
-	@RequestMapping("/csaludintegral")
+	@RequestMapping("/saludintegral")
 	public String getSaludIntegral(ModelAndView modelAndView) {
 		return "saludintegral";
 	}
@@ -150,11 +146,6 @@ public class MainController {
 	
 	@RequestMapping(value = "/sendConferenceEmail", method = RequestMethod.POST)
 	public String sendConferenceEmail(@Valid ConferenceCommand conferenceCommand, BindingResult bindingResult) {
-		
-		logger.info(environment.getProperty("from"));
-		logger.info(environment.getProperty("to"));
-		logger.info(environment.getProperty("contact.subject"));
-		logger.info(environment.getProperty("conference.subject"));
 		
 		if (bindingResult.hasErrors()) {
 			return "formulario";
