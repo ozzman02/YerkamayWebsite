@@ -23,7 +23,7 @@ public class NotificationService {
 	public NotificationService(JavaMailSender javaMailSender) {
 		this.javaMailSender = javaMailSender;
 	}
-	
+		
 	public void sendContactNotification(ContactCommand contactCommand) throws MailException {
 		
 		StringBuilder message = new StringBuilder();
@@ -35,7 +35,7 @@ public class NotificationService {
 			.append("Mensaje: ").append(contactCommand.getMessage()).append("\n");
 		
 		SimpleMailMessage simpleMailMessage = new SimpleMailMessage();
-		
+				
 		simpleMailMessage.setTo(environment.getProperty("to"));
 		simpleMailMessage.setFrom(environment.getProperty("from"));
 		simpleMailMessage.setSubject(environment.getProperty("contact.subject"));
