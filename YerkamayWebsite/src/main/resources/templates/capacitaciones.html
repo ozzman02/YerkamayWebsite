@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	
+	<head>
+    <meta charset="utf-8"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<link rel="icon" href="../static/myfavicon.ico" type="image/x-icon" th:href="@{/myfavicon.ico}"/>
+		<link rel="shortcut icon" href="../static/myfavicon.ico" type="image/x-icon" th:href="@{/myfavicon.ico}"/>
+		<link href="../static/css/bootstrap.min.css" rel="stylesheet" th:href="@{/css/bootstrap.min.css}"/>
+		<link href="../static/css/ie10-viewport-bug-workaround.css" rel="stylesheet" th:href="@{/css/ie10-viewport-bug-workaround.css}"/>
+		<link href="../static/css/style.css" rel="stylesheet" th:href="@{/css/style.css}"/>
+		<link href="../static/css/font-awesome.css" rel="stylesheet" th:href="@{/css/font-awesome.css}"/>
+    <title>Yer Kamay - Capacitaciones</title>
+  </head>
+
+  <body>
+    <div id="wrap">
+      <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" 
+            	aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <li><a href="index.html" th:href="@{/}">Ministerio</a></li>
+              <li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Terapias</a>
+                <ul class="dropdown-menu">
+                  <li><a href="tpsicologicas.html" th:href="@{/tpsicologicas}">Psicológicas</a></li>
+									<li><a href="tinfantil.html" th:href="@{/tinfantil}">Niños y Niñas</a></li>
+									<li><a href="tadolescentes.html" th:href="@{/tadolescentes}">Adolescentes</a></li>
+									<li><a href="tespiritual.html" th:href="@{/tespiritual}">Espiritual / Consejería</a></li>
+									<li><a href="tgapoyo.html" th:href="@{/tgapoyo}">Grupos de Apoyo</a></li>
+									<li><a href="taromaterapia.html" th:href="@{/taromaterapia}">Aromaterapia y Relajación</a></li>
+									<li><a href="tpsicosomaticas.html" th:href="@{/tpsicosomaticas}">Enfermedades Psicosomáticas</a></li>
+                </ul>
+              </li>
+              <li class="active dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Conferencias</a>
+                <ul class="dropdown-menu">
+               		<li><a href="talleres.html" th:href="@{/talleres}">Talleres</a></li>
+									<li class="active"><a href="capacitaciones.html" th:href="@{/capacitaciones}">Capacitaciones</a></li>
+									<li><a href="coaching.html" th:href="@{/coaching}">Coaching</a></li> 
+                </ul>
+              </li>
+              <li><a href="csocial.html" th:href="@{/csocial}">Compromiso Social</a></li>
+							<li><a href="saludintegral.html" th:href="@{/saludintegral}">Salud Integral</a></li>
+							<li><a href="donaciones.html" th:href="@{/donaciones}">Donaciones y Ofrendas</a></li>
+							<li><a href="testimonios.html" th:href="@{/testimonios}">Testimonios</a></li>
+							<li><a href="contacto.html" th:href="@{/contacto}">Contacto</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      
+      <div class="row featurette">
+        <div class="col-md-4">
+          <img class="featurette-image img-responsive center-block" src="../static/img/arboles/tree4.jpg" 
+          	alt="Generic placeholder image" th:src="@{img/arboles/tree4.jpg}"/>
+        </div>
+        <div class="col-md-4">
+          <h2 class="featurette-heading text-center">Capacitaciones</h2>
+          <p class="lead text-justify">
+          	Tenemos un compromiso y un llamado claro de Dios a capacitar a sus hijos e hijas en lo sobrenatural, en establecer 
+          	el Reino de Dios, e impactar de manera positiva la vida de las personas en esta sociedad. Dios no nos llamó a 
+          	establecer una religión Él nos llamó a establecer su Reino. Las capacitaciones están dirigidas a todos aquellos y 
+          	aquellas que han sentido ese mover en su corazón y deseen capacitarse. <strong><em>Dios nos llama a hacer una 
+          	Revolución de Amor, la naturaleza y la gente piden a gritos, que los y las hijas de Dios, lo hagamos.</em></strong>
+          </p> 
+        </div>
+        <div class="col-md-4">
+          <img class="featurette-image img-responsive center-block" src="../static/img/arboles/tree4.jpg" 
+          	alt="Generic placeholder image" th:src="@{img/arboles/tree4.jpg}"/>
+        </div>
+      </div>
+      
+      <hr class="featurette-divider"/>
+
+      <div class="row featurette">
+        <div class="container">
+          <div class="col-md-7">
+            <h2 class="featurette-heading">Para mayor <span class="text-muted">información</span></h2>
+            <p class="lead"><em>Si deseas una capacitación en un tema específico envíanos este 
+            	<a href="formulario.html" th:href="@{/formulario}">formulario</a> o si quieres saber más 
+            	no dudes en contactarnos</em>
+            </p>
+            <p>
+            	<a class="btn btn-lg btn-primary" href="contacto.html" th:href="@{/contacto}" role="button">
+            		Cita Previa
+            	</a>
+            </p>
+          </div>
+          <div class="col-md-5">
+            <img class="featurette-image img-responsive center-block" src="../static/img/galeria/galeria24.jpg" 
+            	alt="Generic placeholder image" th:src="@{img/galeria/galeria24.jpg}"/>
+          </div>
+        </div>
+      </div>
+
+      <div id="push"></div>
+
+    </div> <!-- end wrap -->
+
+    <div id="page-footer" th:replace="fragments/footer :: footer">
+			<div class="container">
+				<p>Yer Kamay Copyright &copy; 2016, All Rights Reserved</p>
+				<ul class="list-inline banner-social-buttons">
+					<li><a href="#" class="btn btn-default btn-sm"><i class="fa fa-facebook fa-fw"></i><span class="network-name">Facebook</span></a></li>
+					<li><a href="#" class="btn btn-default btn-sm"><i class="fa fa-twitter fa-fw"></i><span class="network-name">Twitter</span></a></li>
+					<li><a href="#" class="btn btn-default btn-sm"><i class="fa fa-google-plus fa-fw"></i><span class="network-name">Google</span></a></li>
+				</ul>
+			</div>
+		</div>
+
+    <script src="../static/js/ie10-viewport-bug-workaround.js" th:src="@{/js/ie10-viewport-bug-workaround.js}"></script>
+		<script src="../static/js/ie-emulation-modes-warning.js" th:src="@{/js/ie-emulation-modes-warning.js}"></script>
+		<script src="../static/js/jquery-2.1.4.min.js" th:src="@{/js/jquery-2.1.4.min.js}"></script>
+		<script src="../static/js/bootstrap.min.js" th:src="@{/js/bootstrap.min.js}"></script>
+
+  </body>
+</html>

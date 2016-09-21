@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="utf-8"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<link rel="icon" href="../static/myfavicon.ico" type="image/x-icon" th:href="@{/myfavicon.ico}"/>
+		<link rel="shortcut icon" href="../static/myfavicon.ico" type="image/x-icon" th:href="@{/myfavicon.ico}"/>
+		<link href="../static/css/bootstrap.min.css" rel="stylesheet" th:href="@{/css/bootstrap.min.css}"/>
+		<link href="../static/css/ie10-viewport-bug-workaround.css" rel="stylesheet" th:href="@{/css/ie10-viewport-bug-workaround.css}"/>
+		<link href="../static/css/style.css" rel="stylesheet" th:href="@{/css/style.css}"/>
+		<link href="../static/css/font-awesome.css" rel="stylesheet" th:href="@{/css/font-awesome.css}"/>
+    <title>Yer Kamay - Enfermedades Psicosomáticas</title>
+  </head>
+  <body>
+    <div id="wrap">
+      <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" 
+            	aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <li><a href="index.html" th:href="@{/}">Ministerio</a></li>
+              <li class="active dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Terapias</a>
+                <ul class="dropdown-menu">
+                  <li><a href="tpsicologicas.html" th:href="@{/tpsicologicas}">Psicológicas</a></li>
+									<li><a href="tinfantil.html" th:href="@{/tinfantil}">Niños y Niñas</a></li>
+									<li><a href="tadolescentes.html" th:href="@{/tadolescentes}">Adolescentes</a></li>
+									<li><a href="tespiritual.html" th:href="@{/tespiritual}">Espiritual / Consejería</a></li>
+									<li><a href="tgapoyo.html" th:href="@{/tgapoyo}">Grupos de Apoyo</a></li>
+									<li><a href="taromaterapia.html" th:href="@{/taromaterapia}">Aromaterapia y Relajación</a></li>
+									<li class="active"><a href="tpsicosomaticas.html" th:href="@{/tpsicosomaticas}">Enfermedades Psicosomáticas</a></li>
+                </ul>
+              </li>
+              <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Conferencias</a>
+                <ul class="dropdown-menu">
+                  <li><a href="talleres.html" th:href="@{/talleres}">Talleres</a></li>
+									<li><a href="capacitaciones.html" th:href="@{/capacitaciones}">Capacitaciones</a></li>
+									<li><a href="coaching.html" th:href="@{/coaching}">Coaching</a></li>
+                </ul>
+              </li>
+              <li><a href="csocial.html" th:href="@{/csocial}">Compromiso Social</a></li>
+							<li><a href="saludintegral.html" th:href="@{/saludintegral}">Salud Integral</a></li>
+							<li><a href="donaciones.html" th:href="@{/donaciones}">Donaciones y Ofrendas</a></li>
+							<li><a href="testimonios.html" th:href="@{/testimonios}">Testimonios</a></li>
+							<li><a href="contacto.html" th:href="@{/contacto}">Contacto</a></li>
+            </ul>
+          </div><!--/.navbar-collapse -->
+        </div>
+      </nav>
+      <div class="row featurette">
+        <div class="col-md-4">
+          <img class="featurette-image img-responsive center-block" src="../static/img/arboles/tree4.jpg" 
+          	alt="Generic placeholder image" th:src="@{img/arboles/tree4.jpg}"/>
+        </div>
+        <div class="col-md-4">
+          <h2 class="featurette-heading text-center">Detección y Tratamiento Enfermedades Psicosomáticas</h2>
+          <p class="lead text-justify">
+          	Muchas de las enfermedades y dolencias que tenemos no son tratadas desde la causa, por eso no se curan sino 
+          	que los síntomas persisten. <strong><em>Enfermedades Psicosomáticas son enfermedades de la mente (alma), que 
+          	se evidencia en el cuerpo.</em></strong>
+          </p>
+          <p class="lead text-justify">A continuación algunos ejemplos de este tipo de enfermedad. Si no vamos  a la causa 
+          	y escuchamos que nos está diciendo el cuerpo, no encontraremos la cura integral. <strong><em>La cura viene desde 
+          	el espíritu hasta el cuerpo pasando por las emociones.</em></strong> Una terapia incluye sesión y diagnóstico. 
+          	El tratamiento se evalúa en la terapia y es distinto para cada caso. Se realizan paquetes especiales de acuerdo 
+          	a su necesidad.
+          </p>
+        </div>
+        <div class="col-md-4">
+          <img class="featurette-image img-responsive center-block" src="../static/img/arboles/tree4.jpg" 
+          	alt="Generic placeholder image" th:src="@{img/arboles/tree4.jpg}"/>
+        </div>
+      </div>
+      <hr class="featurette-divider"/>
+      <div class="row featurette">
+        <div class="container">
+          <div class="col-md-7 col-md-push-5">
+            <h2 class="featurette-heading">Ejemplos - <span class="text-muted">Estómago:</span></h2> 
+            <p class="lead text-justify">
+            	Los problemas estomacales más comunes son las úlceras, la gastritis, las hemorragias gástricas, los cánceres y los 
+            	problemas de digestión tales como vómitos, indigestión, etc. “La persona que los padece manifiesta <strong><em>intolerancia 
+            	y temor</em></strong> ante lo que no es de su agrado. <strong><em>Se resiste a las ideas nuevas</em></strong>, sobre todo a 
+            	las que no proceden de ella. Tiene <strong><em>dificultad para adaptarse</em></strong> a alguien o a algo que va contra sus 
+            	planes, sus hábitos y su manera de vivir. Tiene un crítico interior muy fuerte que <strong><em>le impide ceder y dejar hablar
+            	a su corazón</em></strong>, al cual no quiere aceptar incondicionalmente. Es posible que también se <strong><em>acuse a sí 
+            	misma</em></strong> de falta de audacia.”
+            </p>
+          </div>
+          <div class="col-md-5 col-md-pull-7">
+            <img class="img-circle featurette-image img-responsive center-block" src="../static/img/enfermedades/psicosomatica1.jpg" 
+            	alt="Generic placeholder image" th:src="@{img/enfermedades/psicosomatica1.jpg}"/>
+          </div>
+        </div>
+      </div>
+      <hr class="featurette-divider"/>
+      <div class="row featurette">
+        <div class="container">
+          <div class="col-md-7">
+            <h2 class="featurette-heading">Ejemplos - <span class="text-muted">Tendinitis:</span></h2>
+            <p class="lead text-justify">
+            	“La persona que sufre tendinitis siente o ha sentido un <strong><em>enojo reprimido</em></strong>. Es alguien que se 
+            	impide hacer algo por <strong><em>miedo</em></strong> a una ruptura. El lugar del cuerpo afectado indica el área en 
+            	la que se sitúa el miedo; si por ejemplo, es en una mano, la persona afectada debe observar qué se impide hacer con 
+            	ella que pudiera ocasionar una ruptura de la cual se sentiría <strong><em>culpable”</em></strong>
+            </p>
+          </div>
+          <div class="col-md-5">
+            <img class="img-circle featurette-image img-responsive center-block" src="../static/img/enfermedades/psicosomatica2.jpg" 
+            	alt="Generic placeholder image" th:src="@{img/enfermedades/psicosomatica2.jpg}"/>
+          </div>
+        </div>
+      </div>
+      <hr class="featurette-divider"/>
+      <div class="row featurette">
+        <div class="container">
+          <div class="col-md-7 col-md-push-5">
+            <h2 class="featurette-heading">Ejemplos - <span class="text-muted">Estreñimiento:</span></h2>
+            <p class="lead text-justify">
+            	“Tiene una relación directa con soltar viejos pensamientos que ya no son útiles. Una persona que retiene sus heces 
+            	es aquella que <strong><em>se contiene generalmente de decir o hacer algo por miedo</em></strong> a disgustar o a perder 
+            	algo o a alguien”
+            </p>
+          </div>
+          <div class="col-md-5 col-md-pull-7">
+            <img class="img-circle featurette-image img-responsive center-block" src="../static/img/enfermedades/psicosomatica3.jpg" 
+            	alt="Generic placeholder image" th:src="@{img/enfermedades/psicosomatica3.jpg}"/>
+          </div>
+        </div>
+      </div>
+      <hr class="featurette-divider"/>
+      <div class="row">
+        <div class="container">
+          <iframe class="youtube-player center-block" width="760" height="458" src="https://www.youtube.com/embed/BvBqSNkCe2A" 
+            th:src="@{https://www.youtube.com/embed/BvBqSNkCe2A}" frameborder="0" allowfullscreen="true">
+          </iframe>
+        </div>
+      </div>
+      <hr class="featurette-divider"/>
+      <div class="row featurette">
+        <div class="container">
+          <div class="col-md-7">
+            <h2 class="featurette-heading">Para mayor <span class="text-muted">información</span></h2>
+            <p class="lead"><em>Si quieres saber más no dudes en contactarnos</em></p>
+            <p><a class="btn btn-lg btn-primary" href="contacto.html" th:href="@{/contacto}" role="button">Cita Previa</a></p>
+          </div>
+          <div class="col-md-5">
+            <img class="img-circle featurette-image img-responsive center-block" src="../static/img/enfermedades/psicosomatica4.jpg" 
+            	alt="Generic placeholder image" th:src="@{img/enfermedades/psicosomatica4.jpg}"/>
+          </div>
+        </div>
+      </div>
+      <div id="push"></div>
+    </div> <!-- end wrap -->
+    <div id="page-footer" th:replace="fragments/footer :: footer">
+			<div class="container">
+				<p>Yer Kamay Copyright &copy; 2016, All Rights Reserved</p>
+				<ul class="list-inline banner-social-buttons">
+					<li><a href="#" class="btn btn-default btn-sm"><i class="fa fa-facebook fa-fw"></i><span class="network-name">Facebook</span></a></li>
+					<li><a href="#" class="btn btn-default btn-sm"><i class="fa fa-twitter fa-fw"></i><span class="network-name">Twitter</span></a></li>
+					<li><a href="#" class="btn btn-default btn-sm"><i class="fa fa-google-plus fa-fw"></i><span class="network-name">Google</span></a></li>
+				</ul>
+			</div>
+		</div>
+    <script src="../static/js/ie10-viewport-bug-workaround.js" th:src="@{/js/ie10-viewport-bug-workaround.js}"></script>
+		<script src="../static/js/ie-emulation-modes-warning.js" th:src="@{/js/ie-emulation-modes-warning.js}"></script>
+		<script src="../static/js/jquery-2.1.4.min.js" th:src="@{/js/jquery-2.1.4.min.js}"></script>
+		<script src="../static/js/bootstrap.min.js" th:src="@{/js/bootstrap.min.js}"></script>
+  </body>
+</html>
